@@ -12,14 +12,13 @@ public class SourceryAcademy {
 
         // Reads lines from a .txt file, which has a path defined as filePath,
         // iterates over the rows of the file and filters out all of the strings
-        // that do not match the given reegex constraints. Prints the remaining ones.
+        // that do not match the given regex constraints. Prints the remaining ones.
         try {
             Files.lines(Paths.get(filePath))
             .filter(row -> row.matches(regex))
-            .forEach(row -> System.out.println(row));      
+            .forEach(row -> System.out.println(row));
         } catch (Exception e) {
             System.out.println("File could not be read: " + e.getMessage());
         }
-
     }
 }
